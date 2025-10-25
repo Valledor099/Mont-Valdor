@@ -1,0 +1,91 @@
+header{
+    display: flex;
+    background-color:#ACABAB;
+    height: 105px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu{  
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu span{ /*Esto hace las tres rayitas*/
+    display: block;
+    height: 4px;
+    background: black;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+#logo{
+    margin: 0 auto;       
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+
+
+.buscar{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.buscar img {
+    width: 40px;
+    height: 40px;
+}
+
+.buscar input{
+    
+    width: 0px;
+    height: 40px;
+    padding: 5px;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    background-color: rgb(139, 139, 139);
+    margin-left: 5px;
+    border-top: 0px;
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+.buscar:hover input{
+    border:2px solid black;
+    width: 200px;
+    height: 40px;
+    opacity: 1;
+    background-color: rgb(139, 139, 139);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 5px;
+}
+
+.buscar input:focus{/*saca el recuadro cuando clickeas para escibir en el buscador*/
+    outline: none;
+}
+
+.carrito{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+body{
+    background-color: #ACABAB;
+}
+
+main{
+    background-color: white;
+    
+}
