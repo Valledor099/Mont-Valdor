@@ -90,6 +90,7 @@ main{
     
 }
 
+/*.principal es la parte de la imagen grande con la frase en blanco*/
 .principal{
     position: relative;
     
@@ -105,9 +106,8 @@ main{
 
 .principal h1 {
   position: absolute; 
-  top: 60%;          
-  left: 20%;         
-  transform: translate(-50%, -50%); 
+  top: 60%;
+  margin-left: 20px;
   color: white;       
   font-size: 3rem;    
   text-shadow: 2px 2px 5px black; 
@@ -115,72 +115,107 @@ main{
 }
 
 
+/*Todo lo que diga .PERFUMES es la estructura de la caja y todo lo que hay dentro, NO INCLUYE LOS COLORES DE CADA CAJA*/
 .PERFUMES{
+  position:relative;
   display: inline-block;      
   vertical-align: top;
   width: 300px;              
-  margin: 35px;
-  border: 1px solid #1f2a4a;
+  margin: 20px;
   border-radius: 6px;
   overflow: hidden;           
-  background-color: #29356b;  
   box-shadow: 0 4px 12px rgba(0,0,0,.15);
 }
-
 .PERFUMES img{
   display: block;
   width: 100%;
-  height: 280px;        
-  object-fit: contain;        
-  padding: 16px 12px 8px;   
-  background-color: #29356b;  
+  height: 380px;
+  object-fit: contain;
+  padding: 16px 12px 8px;
 }
 
-
-.PERFUMES h3{
-  margin: 0;
-  padding: 12px 10px;
-  background-color: #bdbdbd;  
-  color: #111;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  letter-spacing: .4px;
-  border-top: 1px solid #9c9c9c;
+.PERFUMES h3 {
+  color: white;
+  text-align: left;
+  font-size:x-large;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
 }
 
-.PERFUMES p{
-  float: left;               
-  width: 50%;                 
-  box-sizing: border-box;
-  margin: 0;
-  padding: 10px 0;
-  background-color: #a6a6a6;  
-  color: #000;
-  text-align: center;
-  font-weight: 700;
-  border-top: 1px solid #9c9c9c;
-  cursor: pointer;
-  transition: background .25s, color .25s, transform .05s;
-}
-
-.PERFUMES p + p{
-  border-left: 1px solid #9c9c9c;
-}
-
-.PERFUMES p:hover{
-  background-color: #29356b; 
+.PERFUMES .compra {
+  position: absolute;
+  bottom: 15px;
+  left: 77%;
+  transform: translate(-50%, 20px); 
+  background: none;
+  outline: none;
+  border: none;
   color: #fff;
+  margin: 0;
+  padding: 7px 9px;
+  font-weight: bold;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-.PERFUMES p:active{
-  transform: translateY(1px);
+.PERFUMES .detalles{
+  position:absolute;
+  opacity: 0;
+  color: white;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  bottom: 10px;
+  margin-left: 10px;
 }
 
-.PERFUMES:hover{
-  box-shadow: 0 6px 18px #29356b;
+.PERFUMES:hover h3 {
+  transform: translateY(-40px);
+}
+
+.PERFUMES:hover .compra{
+  opacity: 1;
+  transform: translate(-50%,0);
+  border: 1px solid white;
+}
+
+.PERFUMES:hover .detalles{
+  opacity: 1;
+  border: none;
+}
+
+.PERFUMES .compra:hover{
+  background-color: #fff;
+  color: black;
+}
+
+/*Aca esta el color de cada perfume*/
+
+#Perf1{
+  background-color: #3f3c5f;
 }
 
 
+#Perf2{
+  background-color: #274aa3;
+}
 
+#Perf3{
+  background-color: #207c5f;
+}
+
+#Perf4{
+  background-color: #CEBB80;
+}
+
+#Perf5{
+  background-color: #7a7a7a;
+}
+
+#Perf6{
+  background-color: #52392A;
+}
+
+#Perf7{
+  background-color: #000;
+}
