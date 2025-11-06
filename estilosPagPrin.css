@@ -5,22 +5,76 @@ header{
     align-items: center;
     justify-content: space-between;
     position: relative;
+    padding: 0 1rem;
 }
 
+.off-screen-menu{
+  background-color: #5f5f5f;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  left: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3rem;
+  z-index: 999;
+  transition: .3s ease;
+}
+
+.off-screen-menu svg{
+  position: relative;
+  display: flex;
+  bottom: 28%;
+  left: 85%;
+}
+
+.off-screen-menu ul li{
+  list-style: none;
+  text-align: left;
+}
+
+.off-screen-menu.active{
+  left: 0;
+}
+.off-screen-menu.active ul li {
+  list-style: none;
+  text-align: left;
+}
+
+.off-screen-menu.active svg{
+  position: relative;
+  display: flex;
+  bottom: 28%;
+  left: 85%;
+  cursor: pointer;
+}
+
+nav{
+  padding: 1rem;
+  display: flex;
+}
+
+
 .menu{  
-    display: inline-block;
-    width: 30px;
-    height: 25px;
+    display: relative;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    
 }
 
 .menu span{ /*Esto hace las tres rayitas*/
     display: block;
-    height: 4px;
-    background: black;
-    margin: 5px 0;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    margin: 9px 10px;
     border-radius: 2px;
 }
+
 
 #logo{
     margin: 0 auto;       
