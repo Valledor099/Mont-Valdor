@@ -239,6 +239,7 @@ main{
   color: #fff;
   margin: 0;
   padding: 7px 9px;
+    font-family: Arial, sans-serif;
   font-weight: bold;
   border-radius: 6px;
   opacity: 0;
@@ -253,6 +254,7 @@ main{
   transition: opacity 0.3s ease, transform 0.3s ease;
   bottom: 10px;
   margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .PERFUMES:hover{
