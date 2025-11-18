@@ -205,16 +205,8 @@ header{
 .off-screen-menu.active ul li:nth-child(3) { transition-delay: 0.3s; }
 .off-screen-menu.active ul li:nth-child(4) { transition-delay: 0.4s; }
 
-.menu-icon {
-    margin-right: 15px;
-    font-size: 2rem;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
 
-.off-screen-menu li:hover .menu-icon {
-    transform: scale(1.2) rotate(5deg);
-}
+
 
 .salir{
   position: absolute;
