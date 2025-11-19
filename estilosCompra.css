@@ -1,0 +1,295 @@
+header{
+    display: flex;
+    background-color:#ACABAB;
+    height: 105px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.menu{  
+    display: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    
+}
+
+.menu span{ /*Esto hace las tres rayitas*/
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    margin: 9px 10px;
+    border-radius: 2px;
+}
+
+#logo{
+    margin: 0 auto;       
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.buscar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.buscar img {
+    width: 40px;
+    height: 40px;
+}
+
+.buscar input{
+    
+    width: 0px;
+    height: 40px;
+    padding: 5px;
+    opacity: 0;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    background-color: rgb(139, 139, 139);
+    margin-left: 5px;
+    border-top: 0px;
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+.buscar:hover input{
+    border:2px solid black;
+    width: 200px;
+    height: 40px;
+    opacity: 1;
+    background-color: rgb(139, 139, 139);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 5px;
+}
+
+.buscar input:focus{/*saca el recuadro cuando clickeas para escibir en el buscador*/
+    outline: none;
+}
+
+.carrito{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*-----SIDEBAR-----*/
+.off-screen-menu{
+  background-color: #5f5f5f;
+  height: 100vh;
+  width: 100%;
+  max-width: min(415px, 90vw);
+  position: fixed;
+  top: 0;
+  left: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  z-index: 999;
+  transition: .3s ease;
+  background: linear-gradient(135deg, #2c2c2c 0%, #5f5f5f 50%, #2c2c2c 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+
+.off-screen-menu ul li{
+  position: relative;
+  list-style: none;
+  text-align: left;
+  padding: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.off-screen-menu ul{
+  position: relative;
+  margin-top: 80px;
+  padding: 0;
+}
+
+.off-screen-menu li {
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.off-screen-menu li:hover {
+    transform: translateX(10px);
+}
+
+.off-screen-menu  a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.off-screen-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.off-screen-menu a:hover::after {
+    width: 100%;
+}
+
+
+.off-screen-menu.active{
+  left: 0;
+}
+
+.off-screen-menu.active  li {
+  position: relative;
+  list-style: none;
+  text-align: left;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.off-screen-menu.active ul li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.off-screen-menu.active ul{
+  position: relative;
+}
+
+.off-screen-menu.active ul li:nth-child(1) { transition-delay: 0.1s; }
+.off-screen-menu.active ul li:nth-child(2) { transition-delay: 0.2s; }
+.off-screen-menu.active ul li:nth-child(3) { transition-delay: 0.3s; }
+.off-screen-menu.active ul li:nth-child(4) { transition-delay: 0.4s; }
+
+
+
+
+.salir{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.off-screen-menu.active .salir{
+  display:flexbox;
+  cursor: pointer;
+  overflow: hidden;
+  left: 85%;
+}
+
+nav{
+  padding: 1rem;
+  display: flex;
+}
+
+.UseryRedes {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 50px;
+  height: 50px;             
+  margin: 15px;
+  border-radius: 50%;
+  overflow: hidden;           
+  background-color: #b1b1b1;
+  transition: all 0.3s ease;
+}
+
+.UseryRedes:hover {
+    transform: translateY(-5px) scale(1.1);
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+.UseryRedes svg{
+  width:28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.UseryRedes:hover {
+    transform: scale(1.15);
+    background-color: #fff;
+}
+
+/*Este contiene a todos los iconos*/
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/*-------FIN DEL SIDEBAR-----*/
+
+body{
+    background-color: #ACABAB;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color:#ACABAB;
+    padding: 0;
+    margin: 0;
+    display: grid;
+}
+
+
+#Lista-Products{
+    background-color: white;
+    width: 60%;
+    height: 60vh;
+    margin: 30px;
+    box-shadow:5px 5px rgb(56, 56, 56);
+}
+
+#Lista-Products h2{
+    display: inline-grid;
+}
+
+#Lista-Products h2:nth-child(1){
+    margin-left: 10px;
+}
+
+#Lista-Products h2:nth-child(2){
+    margin-left: 50%;
+}
+
+#Lista-Products h2:nth-child(3){
+    margin-left: 70px;
+}
+
