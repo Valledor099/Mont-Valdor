@@ -174,3 +174,149 @@ body {
     flex: 1;
     border-bottom: 1px solid #333;
 }
+
+.divider span {
+    padding: 0 15px;
+    font-size: 0.9em;
+}
+
+/* Link de Registro */
+.signup-link {
+    text-align: center;
+    color: #999;
+    font-size: 0.95em;
+}
+
+.signup-link a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Derecha - Logo (invertido) */
+.right-section {
+    flex: 1;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-section::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+}
+
+.logo {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 40px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    animation: fadeInScale 0.8s ease-out;
+}
+
+
+
+/* Animaciones */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    body {
+        flex-direction: column-reverse;
+    }
+    
+    .left-section {
+        padding: 30px 20px;
+        order: 2;
+    }
+    
+    .right-section {
+        min-height: 30vh;
+        padding: 30px;
+        order: 1;
+    }
+    
+    .logo {
+        max-width: 150px;
+    }
+    
+    .brand-text h1 {
+        font-size: 1.8em;
+    }
+    
+    .brand-text p {
+        font-size: 0.9em;
+    }
+    
+    .form-header h2 {
+        font-size: 1.6em;
+    }
+    
+    .remember-forgot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-wrapper {
+        max-width: 100%;
+    }
+    
+    .input-group input {
+        padding: 12px 14px;
+    }
+    
+    .btn-primary {
+        padding: 14px;
+        font-size: 1em;
+    }
+}
