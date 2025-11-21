@@ -91,18 +91,82 @@
                 <h2>RESUMEN DE COMPRA</h2>
                 <hr>
 
-                <button type="submit">FINALIZAR COMPRA</button>
+                <button type="submit"><a href="index.html">FINALIZAR COMPRA</a></button>
             </div>
 
             <div id="DatosP">
-                <h2>DATOS PERSONALES</h2>
-                <hr>
+            
+
+                <form class="formulario-datos">
+                    <div class="seccion-form">
+                        <h3>Información Personal</h3>
+                        <div class="grupo-input">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+                        </div>
+
+                        <div class="fila-inputs">
+                            <div class="grupo-input medio">
+                                <label for="dni">DNI</label>
+                                <input type="number" id="dni" placeholder="12345678" required>
+                            </div>
+                            
+                            <div class="grupo-input medio">
+                                <label for="telefono">Teléfono/Celular</label>
+                                <input type="tel" id="telefono" placeholder="11 1234-5678" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seccion-form">
+                        <h3>Dirección de Envío</h3>
+                        <div class="grupo-input">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" placeholder="Calle, número, piso, depto" required>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label for="codPostal">Código Postal</label>
+                            <input type="number" id="codPostal" placeholder="1234" required>
+                        </div>
+                    </div>
+
+                    <div class="seccion-form">
+                        <h3>Método de Pago</h3>
+                        <div class="grupo-input">
+                            <label for="tarjeta">Tipo de Tarjeta</label>
+                            <select name="Tarjetas" id="tarjeta" required>
+                                <option value="">Seleccione una tarjeta</option>
+                                <option value="Visa">VISA</option>
+                                <option value="MasterCard">MasterCard</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label for="numTarjeta">Número de Tarjeta</label>
+                            <input type="number" id="numTarjeta" placeholder="1234 5678 9012 3456" required>
+                        </div>
+
+                        <div class="fila-inputs">
+                            <div class="grupo-input medio">
+                                <label for="fechaCaducidad">Fecha de Caducidad</label>
+                                <input type="month" id="fechaCaducidad" required>
+                            </div>
+
+                            <div class="grupo-input medio">
+                                <label for="cvv">Código de Seguridad (CVV)</label>
+                                <input type="number" id="cvv" placeholder="123" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
             </div>
-
-
-
-
 
         </main>
         <script src="menu.js"></script>

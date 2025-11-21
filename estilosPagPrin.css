@@ -84,7 +84,7 @@ header{
     outline: none;
 }
 
-.carrito{
+.carrito a{
     position: relative;
     display: flex;
     height: 50px;
@@ -386,7 +386,7 @@ main{
   letter-spacing: 2px;
 }
 
-.PERFUMES .compra {
+.PERFUMES .compra{
   position: absolute;
   bottom: 15px;
   left: 77%;
@@ -404,6 +404,11 @@ main{
   transition: opacity 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   font-family: 'Arial', sans-serif;
+}
+
+.PERFUMES a{
+  color: #fff;
+  text-decoration: none;
 }
 
 .PERFUMES .detalles{
@@ -435,11 +440,15 @@ main{
   border: none;
 }
 
-.PERFUMES .compra:hover{
+.PERFUMES .compra:hover {
   background-color: #fff;
-  color: black;
    animation: pulse 2s infinite;
 }
+
+.PERFUMES .compra:hover a{
+  color: #000;
+}
+
 
 /*Aca esta el color de cada perfume*/
 

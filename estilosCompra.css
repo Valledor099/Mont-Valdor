@@ -263,33 +263,357 @@ body{
 
 main{
     background-color:#ACABAB;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    #Lista-Products,
+    #ResumComp {
+        height: auto;
+        min-height: 400px;
+    }
+
+    #ResumComp {
+        box-shadow: 5px 5px rgb(56, 56, 56);
+    }
+
+    #DatosP {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #Lista-Products > h2:nth-child(1){
+        left: 20px;
+        font-size: 1rem;
+    }
+
+    #Lista-Products > h2:nth-child(2){
+        right: 100px;
+        font-size: 0.9rem;
+    }
+
+    #Lista-Products > h2:nth-child(3){
+        right: 20px;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    #Lista-Products,
+    #ResumComp,
+    #DatosP {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        max-width: 250px;
+    }
+
+    .buscar:hover input {
+        width: 150px;
+    }
+
+    #Lista-Products > h2:nth-child(1){
+        left: 10px;
+        font-size: 0.75rem;
+        top: 15px;
+    }
+
+    #Lista-Products > h2:nth-child(2){
+        right: 70px;
+        font-size: 0.7rem;
+        top: 15px;
+    }
+
+    #Lista-Products > h2:nth-child(3){
+        right: 10px;
+        font-size: 0.75rem;
+        top: 15px;
+    }
+
+    #Lista-Products > hr {
+        margin-top: 50px;
+    }
+
+    main {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    #Lista-Products,
+    #ResumComp,
+    #DatosP {
+        padding: 10px;
+    }
+
+    #ResumComp button {
+        font-size: 14px;
+        padding: 12px;
+    }
 }
 
 
 #Lista-Products{
     background-color: white;
-    width: 60%;
+    width: 100%;
     height: 60vh;
-    margin: 30px;
-    box-shadow:5px 5px rgb(56, 56, 56);
+    box-shadow: 5px 5px rgb(56, 56, 56);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-#Lista-Products h2{
-    display: inline-grid;
+#Lista-Products > h2{
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-#Lista-Products h2:nth-child(1){
-    margin-left: 10px;
+#Lista-Products > h2:nth-child(1){
+    position: absolute;
+    left: 40px;
+    top: 20px;
 }
 
-#Lista-Products h2:nth-child(2){
-    margin-left: 50%;
+#Lista-Products > h2:nth-child(2){
+    position: absolute;
+    right: 180px;
+    top: 20px;
 }
 
-#Lista-Products h2:nth-child(3){
-    margin-left: 70px;
+#Lista-Products > h2:nth-child(3){
+    position: absolute;
+    right: 40px;
+    top: 20px;
 }
 
+#Lista-Products > hr{
+    width: 100%;
+    margin-top: 60px;
+    border: 1px solid #ccc;
+}
+
+#ResumComp{
+    background-color: white;
+    width: 100%;
+    height: 60vh;
+    box-shadow: -5px 5px rgb(56, 56, 56);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#ResumComp > h2{
+    margin-top: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#ResumComp > hr{
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+#ResumComp button{
+    width: 100%;
+    padding: 15px;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+#ResumComp button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#ResumComp button:hover{
+    background-color: #5f5f5f;
+}
+
+#DatosP{
+    background-color: white;
+    width: 100%;
+    box-shadow: 5px -5px rgb(56, 56, 56);
+    padding: 30px;
+    box-sizing: border-box;
+    grid-column: 1 / 3;
+    min-height: 300px;
+    position: relative;
+}
+
+#DatosP > h2{
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #2c2c2c;
+}
+
+#DatosP > hr{
+    width: 100%;
+    margin: 20px 0 30px 0;
+    border: 1px solid #ccc;
+}
+
+.formulario-datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.seccion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.seccion-form h3 {
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    margin: 0 0 5px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ACABAB;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-input label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grupo-input input,
+.grupo-input select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.grupo-input input:focus,
+.grupo-input select:focus {
+    outline: none;
+    border-color: #2c2c2c;
+    box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.1);
+}
+
+.grupo-input input:hover,
+.grupo-input select:hover {
+    border-color: #999;
+}
+
+.grupo-input input::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.fila-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grupo-input.medio {
+    width: 100%;
+}
+
+/* Estilos específicos para select */
+.grupo-input select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 35px;
+}
+
+/* Estilos para inputs de número */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Responsive para el formulario */
+@media (max-width: 1200px) {
+    .formulario-datos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formulario-datos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fila-inputs {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #DatosP {
+        padding: 20px;
+    }
+
+    .seccion-form h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #DatosP {
+        padding: 15px;
+    }
+
+    #DatosP > h2 {
+        font-size: 1.2rem;
+    }
+
+    .grupo-input input,
+    .grupo-input select {
+        padding: 9px 10px;
+        font-size: 0.9rem;
+    }
+
+    .grupo-input label {
+        font-size: 0.8rem;
+    }
+}
