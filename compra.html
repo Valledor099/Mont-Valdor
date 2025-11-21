@@ -1,20 +1,19 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <title>Mont Valdor</title>
+        <title>Comprar</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilosCompra.css">
         <link rel="icon" type="image/x-icon" href="img/logo_chico-mont-valdor.ico">
-        <link rel="stylesheet" href="estilosPagPrin.css">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     </head>
+
 
     <body>
 
         <header id="INICIO">
-
-         
-
             <nav>
             <div class="menu">
             <span></span>
@@ -28,24 +27,17 @@
             <div class="buscar">
                 <img src="img/imagen lupa.png" alt="buscar"><input type="search" placeholder="Buscar...">
             </div>
-
-            <div class="carrito"><a href="compra.html">
-            <img src="img/Imagen carrito de compra.png" alt="compra">
-            <span class="carrito-count">0</span>
-            </a></div>
             
         </header>
-
-
-        <main>  
-            
+        <hr>
+        
             <div class="off-screen-menu">
                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="salir">
                     <path d="M11.7333 34.8333L9.16663 32.2666L19.4333 22L9.16663 11.7333L11.7333 9.16663L22 19.4333L32.2666 9.16663L34.8333 11.7333L24.5666 22L34.8333 32.2666L32.2666 34.8333L22 24.5666L11.7333 34.8333Z" fill="#1D1B20"/>
                     </svg>
 
                 <ul>
-                    <li><a href="#INICIO" id="op1">INICIO</a></li>
+                    <li><a href="index.html" id="op1">INICIO</a></li>
                     <li><a href="">FILTRAR</a></li>
                     <li><a href="">CATEGORIAS</a></li>
                     <li><a href="conocenos.html">CONOCENOS</a></li>
@@ -85,65 +77,100 @@
 
             </div>
 
-            <div class="principal">
-            <h1>FRAGANCIAS QUE IMPONEN</h1>
-            <img src="img/PERFUMES CON LOGOS.jpg" alt="Imagen principal">
+        <main>
+
+            <div id="Lista-Products">
+                <h2>PRODUCTOS</h2>
+                <h2>CANTIDAD</h2>
+                <h2>PRECIO</h2>
+                <hr>
             </div>
 
-            <div class="perfumes-container">
-            <div class="PERFUMES" id="Perf1">
-            <img src="img/black mist (sinfondo).png" alt="Black Mist">
-            <h3>BLACK MIST</h3>
-            <p class="detalles">50 ml | 100 ml | 150 ml</p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
+
+            <div id="ResumComp">
+                <h2>RESUMEN DE COMPRA</h2>
+                <hr>
+
+                <button type="submit"><a href="index.html">FINALIZAR COMPRA</a></button>
             </div>
 
-            <div class="PERFUMES" id="Perf2">
-            <img src="img/DEEP_OCEAN (sin fondo).png" alt="Deep Ocean">
-            <h3>DEEP OCEAN</h3>
-            <p class="detalles">50 ml | 100 ml | 150 ml</p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
-            </div>
+            <div id="DatosP">
+            
 
-            <div class="PERFUMES" id="Perf3">
-            <img src="img/GREEN_LEAVES(sin fondo).png" alt="GREEN LEAVES">
-            <h3>GREEN LEAVES</h3>
-            <p class="detalles">50 ml | 100 ml | 150 ml</p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
-            </div>
+                <form class="formulario-datos">
+                    <div class="seccion-form">
+                        <h3>Información Personal</h3>
+                        <div class="grupo-input">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+                        </div>
 
-            <div class="PERFUMES" id="Perf4">
-            <img src="img/SOFT_VANILLA (sin fondo).png" alt="SOFT VANILLA">
-            <h3>SOFT VANILLA</h3>
-            <p class="detalles">50 ml | 100 ml | 150 ml</p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
-            </div>
+                        <div class="fila-inputs">
+                            <div class="grupo-input medio">
+                                <label for="dni">DNI</label>
+                                <input type="number" id="dni" placeholder="12345678" required>
+                            </div>
+                            
+                            <div class="grupo-input medio">
+                                <label for="telefono">Teléfono/Celular</label>
+                                <input type="tel" id="telefono" placeholder="11 1234-5678" required>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="PERFUMES" id="Perf5">
-            <img src="img/SPICY_ICE(sin fondo).png" alt="SPICY ICE">
-            <h3>SPICY ICE</h3>
-            <p class="detalles">50 ml | 100 ml | 150 ml</p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
-            </div>
+                    <div class="seccion-form">
+                        <h3>Dirección de Envío</h3>
+                        <div class="grupo-input">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion" placeholder="Calle, número, piso, depto" required>
+                        </div>
 
-            <div class="PERFUMES" id="Perf6">
-            <img src="img/WOOD_NEROLI (sin fondo).png" alt="WOOD NEROLI">
-            <h3>WOOD NEROLI</h3>
-            <p class="detalles">50 ml | 100 ml | 150 ml</p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
-            </div>
+                        <div class="grupo-input">
+                            <label for="codPostal">Código Postal</label>
+                            <input type="number" id="codPostal" placeholder="1234" required>
+                        </div>
+                    </div>
 
-            <div class="PERFUMES" id="Perf7">
-            <img src="img/giftCard_montValdor-(sinFondo).png" alt="GIFTCARD">
-            <h3>GIFTCARD</h3>
-            <p class="detalles"> $50 | $100 | $150 </p>
-            <button type="button" class="compra"><a href="compra.html">COMPRAR</a></button>
-            </div>
-            </div>
+                    <div class="seccion-form">
+                        <h3>Método de Pago</h3>
+                        <div class="grupo-input">
+                            <label for="tarjeta">Tipo de Tarjeta</label>
+                            <select name="Tarjetas" id="tarjeta" required>
+                                <option value="">Seleccione una tarjeta</option>
+                                <option value="Visa">VISA</option>
+                                <option value="MasterCard">MasterCard</option>
+                            </select>
+                        </div>
 
-            <button id="scrollTop" class="scroll-top">↑</button>
+                        <div class="grupo-input">
+                            <label for="numTarjeta">Número de Tarjeta</label>
+                            <input type="number" id="numTarjeta" placeholder="1234 5678 9012 3456" required>
+                        </div>
+
+                        <div class="fila-inputs">
+                            <div class="grupo-input medio">
+                                <label for="fechaCaducidad">Fecha de Caducidad</label>
+                                <input type="month" id="fechaCaducidad" required>
+                            </div>
+
+                            <div class="grupo-input medio">
+                                <label for="cvv">Código de Seguridad (CVV)</label>
+                                <input type="number" id="cvv" placeholder="123" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
 
         </main>
-        <script src="menu.js"></script> 
+        <script src="menu.js"></script>
     </body>
+
+
 </html>
