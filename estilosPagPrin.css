@@ -390,7 +390,6 @@ nav{
     padding: 20px;
     position: relative;
     width: 100%;
-    background: linear-gradient(to top, #2c2c2c 0%, rgba(44, 44, 44, 0.95) 70%, transparent 100%);
     margin-top: auto;
     flex-shrink: 0;
 }
@@ -413,8 +412,7 @@ main{
 /*.principal es la parte de la imagen grande con la frase en blanco*/
 .principal{
     position: relative;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
 }
 
 .principal img {
